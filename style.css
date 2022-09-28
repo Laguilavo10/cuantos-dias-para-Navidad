@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    /* outline: 1px solid tomato; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: #121f3d;
+}
+
+.fechas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fechas > div{
+    width: 250px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.etiqueta-roja > div > p{
+    width: 85px;
+    background-color: red;
+    text-align: center;
+    border-radius:  5px 5px 0 0;
+    padding: 20px 0 5px 0;
+}
+
+.fechas > div > span{
+    border: 5px solid aqua;
+    border-radius:  0  0  10px 10px;
+    /* margin: 20px; */
+    padding: 10px 20px;
+    background-color: aliceblue;
+    /* font-weight: 30px; */
+    font-size: 70px;
+
+}
+
+.aros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aro1, .aro2{
+    border-radius: 10px;
+    width: 10px;
+    height: 35px;
+    background-color: black;
+    margin: 0 10px;
+    position: absolute;
+    top: -15px;
+
+}
+
+.aro1{
+    left: 10px;
+}
+.aro2{
+    right: 10px;
+}
+
+.etiqueta-roja{
+    display: flex  ;
+    flex-direction: column;
+    position: relative;
+}
+
+.huecos-aros{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    left: -2px;
+
+}
