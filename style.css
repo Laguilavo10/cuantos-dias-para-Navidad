@@ -15,14 +15,14 @@ h1{
     justify-self: center;
     align-self: center;
     margin: 30px;
+    color: white;
 }
+
 .fechas{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     justify-self: center;
-
-    
 }
 
 .fechas > div{
@@ -35,7 +35,7 @@ h1{
 }
 
 .etiqueta-roja > div > p{
-    width: 85px;
+    width: 100px;
     background-color: #ff3a56;
     text-align: center;
     border-radius:  9px 9px 0 0;
@@ -45,11 +45,13 @@ h1{
 .fechas > div > span{
     border: 5px solid aqua;
     border-radius:  0  0  10px 10px;
-    /* margin: 20px; */
-    padding: 10px 20px;
+    width: 70px;
+    padding: 10px 10px;
     background-color: aliceblue;
     /* font-weight: 30px; */
     font-size: 70px;
+    display: flex;
+    justify-content: center;
 
 }
 
