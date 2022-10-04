@@ -28,7 +28,7 @@ setInterval(() => {
 
     mes.innerText = (navidad.getMonth() - hoy.getMonth())
     dia.innerText = (navidad.getDate() - hoy.getDate())
-    hora.innerText = Math.abs((navidad.getHours() - hoy.getHours()))
+    hora.innerText = (24 - hoy.getHours())
     minuto.innerText = (60 - hoy.getMinutes())
     segundo.innerText = (60 - hoy.getSeconds())
 }, 1000);
