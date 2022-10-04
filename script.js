@@ -16,15 +16,15 @@ segundoInicializador = 0
 
 let año = 2022
 
-
-
-let navidad = new Date(2022, 11, 25)
-
 setInterval(() => {
-
+    
+    let navidad = new Date(año, 11, 25)
     let hoy = new Date()
     
-    
+    if (hoy.getFullYear() == año && hoy.getMonth() == 11 && hoy.getDate() >= 25) {
+        año += 1
+    }
+
     let navidadMilisegundos = navidad.getTime()
     let hoyMilisegundos = hoy.getTime()
     
