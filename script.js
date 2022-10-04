@@ -15,46 +15,32 @@ minutoInicializador = 0
 segundoInicializador = 0
 
 let año = 2022
-let navidad = new Date(año, 11, 25)
+
+
+
+let navidad = new Date(2022, 11, 25)
 
 setInterval(() => {
-    
+
     let hoy = new Date()
     
-    if (hoy === navidad){
-        año += 1
-        navidad = new Date(año, 11, 25) 
-    }
-
-    console.log(hoy.getDate());
-
-    mes.innerText = (navidad.getMonth() - hoy.getMonth())
-    dia.innerText = (navidad.getDate() - hoy.getDate())
+    
+    let navidadMilisegundos = navidad.getTime()
+    let hoyMilisegundos = hoy.getTime()
+    
+    
+    
+    let tiempoRestante = Math.floor((navidadMilisegundos - hoyMilisegundos) / ((1000 * 60 * 60 * 24) + 1))
+    
+    
+    mes.innerText = Math.floor((tiempoRestante / 30))
+    dia.innerText = ( tiempoRestante - (30 * mes.innerText))
     hora.innerText = (24 - hoy.getHours())
     minuto.innerText = (60 - hoy.getMinutes())
     segundo.innerText = (60 - hoy.getSeconds())
+     
 }, 1000);
 
 
 
-
-
-
-
-// setInterval(() => {
-//     mesInicializador += 1
-//     mes.innerText = mesInicializador
-//     console.log(mes);
-// }, 1);
-
-
-// setInterval(() => {
-//     let navidad = Date.parse("2022 12 24")
-//     let tiempoActual = Date.now()
-//     let tiempoParaNavidad = (navidad - tiempoActual)
-//     console.log({
-//         tiempoParaNavidad
-//         });
-    
-// }, 1000);
 
