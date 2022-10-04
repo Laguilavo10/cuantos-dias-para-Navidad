@@ -11,12 +11,9 @@ body{
     display: flex;
     flex-direction: column;
     background-image: url(https://www.xtrafondos.com/wallpapers/arbol-de-navidad-en-medio-del-bosque-9049.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    /* margin-top: 70px; */
-    /* justify-content: center; */
-
+    background-repeat: no-repeat;
+    height: 100%;
 }
 h1{
     justify-self: center;

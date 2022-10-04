@@ -8,11 +8,6 @@ let minuto = $('.minuto-numero')
 let segundo = $('.segundo-numero')
 
 
-mesInicializador = 0
-diaInicializador = 0
-horaInicializador = 0
-minutoInicializador = 0
-segundoInicializador = 0
 
 let año = 2022
 
@@ -32,9 +27,14 @@ setInterval(() => {
     
     let tiempoRestante = Math.floor((navidadMilisegundos - hoyMilisegundos) / ((1000 * 60 * 60 * 24) + 1))
     
-    
-    mes.innerText = Math.floor((tiempoRestante / 30))
-    dia.innerText = ( tiempoRestante - (30 * mes.innerText))
+    if (hoy.getMonth % 2) {
+        mes.innerText = Math.floor((tiempoRestante / 31))
+        dia.innerText = ( tiempoRestante - (31 * mes.innerText))
+
+    }else{
+        mes.innerText = Math.floor((tiempoRestante / 30))
+        dia.innerText = ( tiempoRestante - (30 * mes.innerText))
+    }
     hora.innerText = (24 - hoy.getHours())
     minuto.innerText = (60 - hoy.getMinutes())
     segundo.innerText = (60 - hoy.getSeconds())
