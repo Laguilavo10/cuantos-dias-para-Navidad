@@ -21,6 +21,7 @@ h1{
     margin: 30px;
     color: black;
     font-size: 50px;
+    text-align: center;
 }
 
 .fechas{
@@ -99,4 +100,11 @@ h1{
     border-radius: 20px;
     left: -2px;
 
+}
+
+@media (width < 550px) {
+    body{
+        height: 100%;
+        margin-bottom: 20px;
+    }
 }
