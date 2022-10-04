@@ -26,6 +26,8 @@ setInterval(() => {
         navidad = new Date(año, 11, 25) 
     }
 
+    console.log(hoy.getDate());
+
     mes.innerText = (navidad.getMonth() - hoy.getMonth())
     dia.innerText = (navidad.getDate() - hoy.getDate())
     hora.innerText = (24 - hoy.getHours())
