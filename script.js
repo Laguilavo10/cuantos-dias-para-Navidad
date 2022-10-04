@@ -14,11 +14,18 @@ horaInicializador = 0
 minutoInicializador = 0
 segundoInicializador = 0
 
+let año = 2022
+let navidad = new Date(año, 11, 25)
 
 setInterval(() => {
-
+    
     let hoy = new Date()
-    let navidad = new Date(2022, 11, 25)
+    
+    if (hoy === navidad){
+        año += 1
+        navidad = new Date(año, 11, 25) 
+    }
+
     mes.innerText = (navidad.getMonth() - hoy.getMonth())
     dia.innerText = (navidad.getDate() - hoy.getDate())
     hora.innerText = Math.abs((navidad.getHours() - hoy.getHours()))
